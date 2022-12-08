@@ -1,0 +1,356 @@
+    * {
+        margin: 0;
+        padding: 0;
+        color: white;
+        font-family: sans-serif;
+        list-style: none;
+        text-decoration: none;
+        box-sizing: border-box;
+    }
+    
+    .banner {
+        width: 100%;
+        height: 100vh;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(sofamain.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .navbar {
+        width: 85%;
+        margin: auto;
+        padding: 35px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .navbar ul li {
+        display: inline-block;
+        margin: 0 20px;
+        position: relative;
+        letter-spacing: 1px
+    }
+    
+    .navbar ul li a {
+        color: white;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: 0.4s;
+    }
+    
+    .logo {
+        color: white;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    
+    .logo:hover {
+        color: #009688;
+    }
+    
+    .navbar ul li::after {
+        content: '';
+        height: 3px;
+        width: 0%;
+        background: #009688;
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        transition: 0.5s;
+    }
+    
+    .navbar ul li:hover::after {
+        width: 100%;
+    }
+    
+    .content {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+        color: #fff;
+    }
+    
+    .content h1 {
+        font-size: 27px;
+        margin-top: 80px;
+    }
+    
+    .content p {
+        margin: 20px auto;
+        font-weight: 100;
+        line-height: 25px;
+    }
+    
+    button {
+        width: 200px;
+        padding: 15px 0;
+        text-align: center;
+        margin: 20px 10px;
+        border-radius: 25px;
+        font-weight: bold;
+        border: 2px solid #009688;
+        background: transparent;
+        color: #fff;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    span {
+        background: #009688;
+        height: 100%;
+        width: 0%;
+        border-radius: 25px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+        transition: 0.5s;
+    }
+    
+    button:hover span {
+        width: 100%;
+    }
+    
+    button:hover {
+        border: none;
+    }
+    
+    .show-menu-btn,
+    .hide-menu-btn {
+        transition: 0.4s;
+        font-size: 30px;
+        cursor: pointer;
+        display: none;
+    }
+    
+    .navbar ul li a:hover,
+    .show-menu-btn:hover,
+    .hide-menu-btn:hover {
+        color: #3498db;
+    }
+    
+    #chk {
+        position: absolute;
+        visibility: hidden;
+        z-index: -1111;
+    }
+    
+    .ican a {
+        display: none;
+    }
+    
+    .container {
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        background: linear-gradient(45deg, rgba(85, 6, 158, 0.75), rgba(100, 5, 93, 0.75));
+    }
+    
+    .container .card {
+        position: relative;
+        width: 360px;
+        height: 420px;
+        margin: 20px;
+        border-radius: 20px;
+        overflow: hidden;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.5);
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    }
+    
+    img {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        /* object-fit: cover; */
+    }
+    
+    .container-corner {
+        width: 100%;
+        height: 100vh;
+        padding: 20px;
+        background-color: rgb(124, 177, 179, 0.75)
+    }
+    
+    .cornar {
+        width: 100%;
+        height: 100%;
+        margin: 0px auto;
+        padding-top: 30px;
+        background-image: linear-gradient(rgba(38, 51, 73, 1), rgba(68, 100, 111, 0.5)), url(living-room.jpg);
+        background-size: cover;
+        background-position: bottom;
+        background-attachment: fixed;
+    }
+    
+    .bottom-header {
+        font-size: 25px;
+        color: #333;
+        background: rgba(5, 2, 2, 0.5);
+    }
+    
+    .bottom-container {
+        width: 60%;
+        height: 30vh;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .bottom-container .modern {
+        padding: 20px;
+        line-height: 1.5;
+        letter-spacing: 1;
+        text-align: justify;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+    
+    .bottom-container .modern li a {
+        color: #e8e9f1;
+        font-size: 16px;
+    }
+    
+    .bottom-container .modern li a:hover {
+        color: rgb(4, 109, 136);
+        font-size: 20px;
+        transition: 0.5s;
+    }
+    
+    footer {
+        width: 100%;
+        background: rgb(87, 76, 76);
+        padding: 20px;
+        letter-spacing: 1;
+        color: #e8e9f1;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+    
+    @media screen and (max-width:850px) {
+        .show-menu-btn {
+            display: block;
+        }
+        .menu {
+            display: block;
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background: #333;
+            right: -100%;
+            top: 100px;
+            text-align: center;
+            justify-content: center;
+            padding: 90px 0;
+            transition: 0.7s;
+            color: white;
+            z-index: 1;
+        }
+        .navbar ul li {
+            display: block;
+            margin: 27px 20px;
+            letter-spacing: 1px;
+        }
+        .navbar ul li a:hover {
+            font-size: 35px;
+            margin: 0px 10px;
+            /* border-bottom: 2px solid grey; */
+        }
+        button {
+            display: block;
+            font-size: 13px;
+            width: 50%;
+            margin: 10px auto;
+        }
+        .navbar ul li::after {
+            position: absolute;
+            left: 30%;
+        }
+        .navbar ul li:hover::after {
+            width: 40%;
+            margin: 0 auto;
+        }
+        #chk:checked~.menu {
+            right: 0;
+        }
+        .navbar .fa-brands {
+            display: block;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+            transition: 0.7s;
+            z-index: 1;
+        }
+        .ican {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.7s;
+            z-index: 1;
+        }
+        .ican a {
+            display: block;
+        }
+        .fa-brands:hover {
+            font-size: 35px;
+            margin: 0px 10px;
+            transition: 0.7s;
+        }
+        .fa-facebook {
+            background-color: #3498db;
+            z-index: 1;
+        }
+        .fa-whatsapp {
+            background-color: rgb(31, 118, 28)
+        }
+        .fa-twitter-square {
+            background-color: rgb(30, 151, 212)
+        }
+        .fa-instagram-square {
+            background-color: rgb(242, 114, 29)
+        }
+        .bottom-container {
+            width: 80%;
+            height: 80%;
+            margin: 0 auto;
+            display: block;
+            box-shadow: 10px 10px 15px rgb(0, 0, 0, 0.5);
+        }
+        .bottom-container .modern {
+            text-align: center;
+        }
+        .bottom-header {
+            padding: 20px;
+        }
+        footer {
+            font-size: 14px;
+        }
+    }
+    
+    @media screen and (max-width:450px) {
+        .container {
+            padding: 0px;
+        }
+        .container .card {
+            width: 100%;
+            height: 100%;
+            margin: 10px;
+        }
+        footer {
+            font-size: 9px;
+        }
+    }
